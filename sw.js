@@ -11,6 +11,7 @@ self.addEventListener('install', e => {
     caches.open(cacheName)
       .then(cache => cache.addAll(pathsToCache))
       .then(_ => console.info(`Caching for "${cacheName}" complete.`))
+      .then(_ => self.skipWaiting())
   );
 });
 
@@ -24,6 +25,7 @@ self.addEventListener('activate', e => {
         }
       })))
       .then(_ => console.info(`Deleted old caches.`))
+      .then(_ => self.clients.claim())
   );
 });
 
