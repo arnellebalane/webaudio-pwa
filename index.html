@@ -14,5 +14,10 @@
         <canvas>Sorry, your browser does not support HTML5 Canvas.</canvas>
 
         <script src="main.js"></script>
+        <script>
+          if (navigator.serviceWorker) {
+            navigator.serviceWorker.register('sw.js');
+          }
+        </script>
     </body>
 </html>
