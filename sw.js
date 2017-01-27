@@ -1,10 +1,10 @@
 const cacheName = 'cache-v2';
 const pathsToCache = [
   '/',
-  '/main.css',
-  '/main.js',
-  '/logo.png',
-  '/manifest.json'
+  '/static/stylesheets/main.css',
+  '/static/javascripts/main.js',
+  '/static/images/logo.png',
+  '/static/manifest.json'
 ];
 
 
